@@ -16,9 +16,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Clientes',
+      url: '/clientes',
+      icon: 'body'
+    },
+    {
+      title: 'Productos',
+      url: '/productos',
+      icon: 'cube'
+    },
+    {
+      title: 'Pedidos',
+      url: '/pedidos',
+      icon: 'paper'
+    },
+    {
+      title: 'Tarifas',
+      url: '/tarifa',
+      icon: 'pricetags'
     }
   ];
 
