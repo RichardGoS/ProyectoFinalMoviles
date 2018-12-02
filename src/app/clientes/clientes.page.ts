@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesPage implements OnInit {
 
+	//HOLA PRUEBA
+	//prueba 2
+	
   constructor() { }
 
   ngOnInit() {
