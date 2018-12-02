@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>clientes</ion-title>
+    <ion-title>
+    	<ion-icon (click)="backSite()" name="arrow-back"></ion-icon> Clientes
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+	<ion-list>
+          
+        <ion-button  *ngFor="let item of clientes" (click)="itemSelected(item)" >
+                    {{ item.cc }} - {{ item.nombre }} - {{ item.municipio }}
+        </ion-button> 
+               
+    </ion-list>
 
 </ion-content>

@@ -16,9 +16,12 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'clientes', loadChildren: './clientes/clientes.module#ClientesPageModule' },
-  { path: 'productos', loadChildren: './productos/productos.module#ProductosPageModule' },
-  { path: 'tarifa', loadChildren: './tarifa/tarifa.module#TarifaPageModule' },
-  { path: 'pedidos', loadChildren: './pedidos/pedidos.module#PedidosPageModule' }
+  { path: 'tarifarios', loadChildren: './tarifarios/tarifarios.module#TarifariosPageModule' },
+  { path: 'tarifarios/:producto', loadChildren: './tarifarios/tarifarios.module#TarifariosPageModule' },
+  { path: 'pedidos',   loadChildren: './pedidos/pedidos.module#PedidosPageModule'  },
+  { path: 'producto',  loadChildren: './producto/producto.module#ProductoPageModule'  },
+  { path: 'detalleCliente', loadChildren: './detalle-cliente/detalle-cliente.module#DetalleClientePageModule' },
+  { path: 'detalleCliente/:cliente', loadChildren: './detalle-cliente/detalle-cliente.module#DetalleClientePageModule' }
 ];
 
 @NgModule({

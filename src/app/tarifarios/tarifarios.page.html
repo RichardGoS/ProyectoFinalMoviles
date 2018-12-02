@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon (click)="backSite()" name="arrow-back"></ion-icon>Tarifarios {{producto.nombre}} !!!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label>Id</ion-label>
+            {{producto.id_producto}}
+          </ion-item>
+        <ion-item>
+          <ion-label>Cantidad</ion-label>
+          {{producto.cantidad}}
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Unidad</ion-label>
+          {{producto.unidad}}
+        </ion-item>
+
+        <ion-list>
+            <ion-item *ngFor="let precio of tarifas.precios"> 
+              <ion-avatar item-start>
+                <img src="../../assets/icon/favicon.png">
+              </ion-avatar>
+              <h2>{{precio.tipo_cliente}}</h2><br>
+              <h3>$ {{precio.precio}}</h3>
+            </ion-item>
+          </ion-list>
+      
+      </ion-list>
+
+</ion-content>

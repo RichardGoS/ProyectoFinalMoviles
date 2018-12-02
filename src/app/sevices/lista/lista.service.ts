@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
-import { Observable, of, throwError } from 'rxjs';
 
+
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
 @Injectable({
   providedIn: 'root'
 })
-export class TarifasService {
+export class ListaService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) 
+  {
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
@@ -30,12 +36,9 @@ export class TarifasService {
     return body || { };
   }
 
-  getTarifas(): Observable<any> {
-    return this.httpClient.get("http://www.mocky.io/v2/5bfea96e3100005700bb4dba")
-    .pipe(
+  getIcons(): Observable<any> {
+    return this.httpClient.get("http://www.mocky.io/v2/5bfbf440310000730039bba8", httpOptions).pipe(
       map(this.extractData),
-      catchError(this.handleError)
-    );
+      catchError(this.handleError));
   }
-
 }

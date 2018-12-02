@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-pedidos',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosPage implements OnInit {
 
-  constructor() { }
+  constructor(public _location: Location) { }
 
   ngOnInit() {
+  }
+
+  backsite(){
+  	this._location.back();
   }
 
 }

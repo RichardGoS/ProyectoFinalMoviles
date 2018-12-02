@@ -6,7 +6,7 @@ import { Observable, of, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TarifasService {
+export class ProductoService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -30,12 +30,11 @@ export class TarifasService {
     return body || { };
   }
 
-  getTarifas(): Observable<any> {
-    return this.httpClient.get("http://www.mocky.io/v2/5bfea96e3100005700bb4dba")
+  obtenerProductosService(): Observable<any> {
+    return this.httpClient.get("http://www.mocky.io/v2/5bfead453100005c00bb4dce")
     .pipe(
       map(this.extractData),
       catchError(this.handleError)
     );
   }
-
 }

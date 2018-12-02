@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    	<ion-icon (click)="backSite()" name="arrow-back"></ion-icon>Detalle Cliente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+
+        <ion-item>
+            <ion-label>CC</ion-label>
+            {{cliente.cc}}
+          </ion-item>
+        <ion-item>
+          <ion-label>Nombre</ion-label>
+          {{cliente.nombre}}
+        </ion-item>
+        <ion-item>
+          <ion-label>Departamento</ion-label>
+          {{cliente.departamento}}
+        </ion-item>
+        <ion-item>
+          <ion-label>Municipio</ion-label>
+          {{cliente.municipio}}
+        </ion-item>
+        <ion-item>
+          <ion-label>Direccion</ion-label>
+          {{cliente.direccion}}
+        </ion-item>
+        <ion-item>
+          <ion-label>Correo</ion-label>
+          {{cliente.correo}}
+        </ion-item>
+        <ion-item>
+          <ion-label>Tipo de cliente</ion-label>
+          {{cliente.tipo_cliente}}
+        </ion-item>
+    </ion-list>
+
+</ion-content>

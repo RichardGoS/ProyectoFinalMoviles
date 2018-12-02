@@ -22,7 +22,7 @@ export class AppComponent {
     },
     {
       title: 'Productos',
-      url: '/productos',
+      url: '/producto',
       icon: 'cube'
     },
     {
@@ -32,7 +32,7 @@ export class AppComponent {
     },
     {
       title: 'Tarifas',
-      url: '/tarifa',
+      url: '/tarifarios',
       icon: 'pricetags'
     }
   ];

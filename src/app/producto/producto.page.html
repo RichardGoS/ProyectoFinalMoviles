@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+          <ion-icon (click)="backSite()" name="arrow-back"></ion-icon> Productos
+        </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+       <!-- <ion-list inset>
+          <ion-row *ngFor="let item of productos" (click)="itemSelected(item)">
+              <ion-col col-12>
+                <ion-button ion-item  >
+                  {{ item.nombre }} - ({{ item.cantidad }}) - ({{ item.unidad }})
+                </ion-button> 
+              </ion-col>
+            </ion-row>
+        </ion-list>-->
+
+        <ion-list>
+          
+                  <ion-button  *ngFor="let item of productos" (click)="itemSelected(item)" >
+                    {{ item.nombre }} - ({{ item.cantidad }}) - ({{ item.unidad }})
+                  </ion-button> 
+               
+          </ion-list>
+
+        
+            
+          
+
+</ion-content>
