@@ -1,11 +1,41 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-    	<ion-icon (click)="backsite()" name="arrow-back"></ion-icon> Pedidos
+    	<ion-icon (click)="backsite()" name="arrow-back"></ion-icon> Pedido
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+    <form (ngSubmit)="tomarPedido()">
 
+    	<ion-item>
+    		<ion-label>Cliente</ion-label>
+    		<ion-select ok-text="Okay" name="cc" [(ngModel)]="cc" cancel-text="Dismiss">
+        		<ion-select-option  *ngFor="let item of clientes" value="{{item.cc}}">
+        			{{ item.cc }} - {{ item.nombre }} - {{ item.municipio }}
+        		</ion-select-option>
+      		</ion-select>
+    	</ion-item>
+    	<ion-item>
+    		<ion-label>Producto</ion-label>
+    		<ion-select ok-text="Okay" name="id_producto" [(ngModel)]="id_producto" cancel-text="Dismiss">
+        		<ion-select-option *ngFor="let producto of productos" value="{{producto.id_producto}}">
+        			{{ producto.nombre }} - ({{ producto.cantidad }}) - ({{ producto.unidad }})
+        		</ion-select-option>
+      		</ion-select>
+    	</ion-item>
+    	<ion-item>
+            <ion-label>Cantidad</ion-label>
+            <ion-input type="number" min="0" name="cantidad" [(ngModel)]="cantidad" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Observación</ion-label>
+            <ion-input type="text" name="observacion" [(ngModel)]="observacion"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        	<ion-button ion-button round (click)="tomarPedido()" >Round Button</ion-button>
+        </ion-item>
+    </form>
 </ion-content>

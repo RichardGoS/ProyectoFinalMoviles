@@ -3,6 +3,7 @@ import { Location} from '@angular/common';
 import { TarifasService } from '../sevices/tarifarios/tarifas.service';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Producto } from '../models/producto';
+import { Tarifa } from '../models/tarifa';
 
 @Component({
   selector: 'app-tarifarios',
@@ -11,21 +12,10 @@ import { Producto } from '../models/producto';
 })
 export class TarifariosPage implements OnInit {
 
-  public tarifas = {
-    producto:null,
-    cantidad:null,
-    unidad:null,
-    producto_id:null,
-    precios:[]
-  };
+  public tarifas : Array<Tarifa>;
 
   public producto;
-  /*public producto = {
-    nombre:null,
-    cantidad:null,
-    unidad:null,
-    id_producto:null
-  };*/
+  
 
   constructor(public _location: Location,
              public serviceTarifa: TarifasService,

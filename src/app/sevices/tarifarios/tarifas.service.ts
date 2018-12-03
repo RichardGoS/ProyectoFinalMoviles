@@ -31,10 +31,9 @@ export class TarifasService {
   }
 
   getTarifas(): Observable<any> {
-    return this.httpClient.get("http://www.mocky.io/v2/5bfea96e3100005700bb4dba")
+    return this.httpClient.get("http://www.mocky.io/v2/5c04034e3300007800d01cae")
     .pipe(
-      map(this.extractData),
-      catchError(this.handleError)
+      map(this.extractData)
     );
   }
 

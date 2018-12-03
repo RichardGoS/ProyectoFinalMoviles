@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    	<ion-icon (click)="backSite()" name="arrow-back"></ion-icon>Deetalle del pedido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+
+		<ion-item>
+	        <ion-label>Datos del cliente</ion-label>
+	    </ion-item>
+
+        <p *ngFor="let cliente of clientes">
+        	<ng-container *ngIf="cliente.cc == pedido.cc">
+	            <ion-item>
+	            	<ion-label>CC</ion-label>
+	                {{cliente.cc}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Nombre</ion-label>
+	                {{cliente.nombre}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Departamento</ion-label>
+	                {{cliente.departamento}} 
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Municipio</ion-label>
+	                {{cliente.municipio}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Direccion</ion-label>
+	                {{cliente.direccion}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Correo</ion-label>
+	                {{cliente.correo}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Tipo Cliente</ion-label>
+	                {{cliente.tipo_cliente}}
+	            </ion-item>
+	        </ng-container>
+        </p>
+
+        <ion-item>
+	        <ion-label>Datos del producto</ion-label>
+	    </ion-item>
+
+        <p *ngFor="let producto of productos">
+        	<ng-container *ngIf="producto.id_producto == pedido.id_producto">
+	            <ion-item>
+	            	<ion-label>Producto</ion-label>
+	                {{producto.nombre}}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Cantodad</ion-label>
+	                {{ producto.cantidad }}
+	            </ion-item>
+	            <ion-item>
+	            	<ion-label>Unidad</ion-label>
+	                {{ producto.unidad }}
+	            </ion-item>
+	        </ng-container>
+        </p>
+
+        <ion-item>
+	        <ion-label>Datos del pedido</ion-label>
+	    </ion-item>
+
+
+        <ion-item>
+	    	<ion-label>Cantidad de producto</ion-label>
+	        {{pedido.cantidad}}
+		</ion-item>
+
+		<ion-item>
+	    	<ion-label>Observacion</ion-label>
+	        {{pedido.observacion}}
+		</ion-item>
+
+
+
+      
+    </ion-list>
+
+</ion-content>

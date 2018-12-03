@@ -21,7 +21,9 @@ const routes: Routes = [
   { path: 'pedidos',   loadChildren: './pedidos/pedidos.module#PedidosPageModule'  },
   { path: 'producto',  loadChildren: './producto/producto.module#ProductoPageModule'  },
   { path: 'detalleCliente', loadChildren: './detalle-cliente/detalle-cliente.module#DetalleClientePageModule' },
-  { path: 'detalleCliente/:cliente', loadChildren: './detalle-cliente/detalle-cliente.module#DetalleClientePageModule' }
+  { path: 'detalleCliente/:cliente', loadChildren: './detalle-cliente/detalle-cliente.module#DetalleClientePageModule' },
+  { path: 'detallePedido', loadChildren: './detalle-pedido/detalle-pedido.module#DetallePedidoPageModule' },
+  { path: 'detallePedido/:pedido', loadChildren: './detalle-pedido/detalle-pedido.module#DetallePedidoPageModule' }
 ];
 
 @NgModule({

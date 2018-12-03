@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <ion-icon (click)="backSite()" name="arrow-back"></ion-icon>Tarifarios {{producto.nombre}} !!!
+      <ion-icon (click)="backSite()" name="arrow-back"></ion-icon>Tarifarios {{producto.nombre}} !
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -24,15 +24,14 @@
           {{producto.unidad}}
         </ion-item>
 
-        <ion-list>
-            <ion-item *ngFor="let precio of tarifas.precios"> 
-              <ion-avatar item-start>
-                <img src="../../assets/icon/favicon.png">
-              </ion-avatar>
-              <h2>{{precio.tipo_cliente}}</h2><br>
-              <h3>$ {{precio.precio}}</h3>
+        <p *ngFor="let tarifa of tarifas">
+            <ion-item *ngIf="tarifa.producto_id == producto.id_producto">
+                <ion-avatar item-start>
+                  <img src="../../assets/icon/favicon.png">
+                </ion-avatar>
+                <h2>{{tarifa.tipo_cliente}} </h2> <h3>$ {{tarifa.precio}}</h3> 
             </ion-item>
-          </ion-list>
+        </p>
       
       </ion-list>
 
